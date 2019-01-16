@@ -26,7 +26,7 @@ const SongRow = (props) => {
                     {props.song.band}
                 </td>
                 <td>
-                    {props.song.duration}
+                    {props.buildDurationString(props.song.duration)}
                 </td>
             </tr>
     )

@@ -1,8 +1,17 @@
 import React from 'react';
 
-const SongDetail = () => {
+const SongDetail = (props) => {
     return (
-        <div>SongDetail placeholder</div>
+        <div>
+            {
+                props.selectedSong && 
+                <div>
+                    <div>{props.selectedSong.title}</div>
+                    <div>{props.selectedSong.band}</div>
+                    <div>{props.buildDurationString(props.selectedSong.duration)}</div>
+                </div>
+            }
+        </div>
     )
 }
 
