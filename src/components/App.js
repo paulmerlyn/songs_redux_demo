@@ -5,7 +5,8 @@ import SongRow from './SongRow';
 import {Grid, Row, Col} from 'react-bootstrap';
 
 const onSongSelect = (id) => {
-    // to do 
+    // Now populate the SongDetail with the selected song
+    console.log(`onSongSelect called in App with ${id}`); 
 }
 
 const getSongs = () => {
@@ -19,7 +20,6 @@ const getSongs = () => {
 
 const getSongRows = () => {
     const songs = getSongs();
-    let rowNum = 0;
     const songRows = songs.map((song, index) => {
         return (
             <SongRow key={index.toString()} song={song} onSongSelect={onSongSelect}/>
