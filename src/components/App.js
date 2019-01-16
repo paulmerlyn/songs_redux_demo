@@ -4,6 +4,10 @@ import SongDetail from './SongDetail';
 import SongRow from './SongRow';
 import {Grid, Row, Col} from 'react-bootstrap';
 
+const onSongSelect = (id) => {
+    // to do 
+}
+
 const getSongs = () => {
     return [
         {title: 'She loves you', band: 'The Beatles', duration: 154, id: 1},
@@ -18,7 +22,7 @@ const getSongRows = () => {
     let rowNum = 0;
     const songRows = songs.map((song, index) => {
         return (
-            <SongRow key={index.toString()} song={song}/>
+            <SongRow key={index.toString()} song={song} onSongSelect={onSongSelect}/>
         )
     });
     console.log(songRows);
